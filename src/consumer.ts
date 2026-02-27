@@ -23,7 +23,7 @@ export const startSendMailConsumer = async () => {
           const { to, subject, html } = JSON.parse(
             message.value?.toString() || "{}",
           );
-          console.log("Received mail data:", { to, subject});
+          console.log("Received mail data:", { to, subject });
 
           const transporter = nodemailer.createTransport({
             host: "smtp.gmail.com",
